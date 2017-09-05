@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1504620520 source:/home/diegobrian/Dropbox/Diego/UNB/TP1/Lista1/Dominio.cpp
+	"Dominio.h"
+
+1504620442 /home/diegobrian/Dropbox/Diego/UNB/TP1/Lista1/Dominio.h
+	<stdexcept>
+
+1504579706 source:/home/diegobrian/Dropbox/Diego/UNB/TP1/Lista1/Entidades.cpp
+
+1504620557 source:/home/diegobrian/Dropbox/Diego/UNB/TP1/Lista1/main.cpp
+	<iostream>
+	"Dominio.h"
+	"Entidades.h"
+	"TestesDominio.h"
+	"TestesEntidades.h"
+
+1504579771 /home/diegobrian/Dropbox/Diego/UNB/TP1/Lista1/Entidades.h
+
+1504579810 /home/diegobrian/Dropbox/Diego/UNB/TP1/Lista1/TestesDominio.h
+
+1504579790 /home/diegobrian/Dropbox/Diego/UNB/TP1/Lista1/TestesEntidades.h
+
+1504579721 source:/home/diegobrian/Dropbox/Diego/UNB/TP1/Lista1/TestesDominio.cpp
+
+1504579734 source:/home/diegobrian/Dropbox/Diego/UNB/TP1/Lista1/TestesEntidades.cpp
+

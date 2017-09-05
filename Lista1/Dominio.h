@@ -1,97 +1,107 @@
+#ifndef DOMINIOS_H_INCLUDED
+#define DOMINIOS_H_INCLUDED
+
+#include <stdexcept>
+
+using namespace std;
+
 class Nome {
 private:
-        String nome;
+        string nome;
 
         const static int TAMANHO_MAXIMO = 15;
 
         // Método responsável por validação.
 
-        void validarNome(String) throw (invalid_argument);
+        void validarNome(string) throw (invalid_argument);
 
 public:
         // Métodos de acesso.
 
-        void setNome(String) throw (invalid_argument);
+        void setNome(string) throw (invalid_argument);
 
-        String getNome() const {
+        string getNome() const {
             return nome;
         }
 };
 
 class Telefone {
 private:
-        String telefone;
+        string telefone;
 
         const static int TAMANHO = 14;
 
         // Método responsável por validação.
 
-        void validarTelefone(String) throw (invalid_argument);
+        void validarTelefone(string) throw (invalid_argument);
 
 public:
         // Métodos de acesso.
 
-        void setTelefone(String) throw (invalid_argument);
+        void setTelefone(string) throw (invalid_argument);
 
-        String getTelefone() const {
+        string getTelefone() const {
             return telefone;
         }
 };
 
 class Titulo {
 private:
-        String titulo;
+        string titulo;
 
         const static int TAMANHO_MAXIMO = 20;
 
         // Método responsável por validação.
 
-        void validarTitulo(String) throw (invalid_argument);
+        void validarTitulo(string) throw (invalid_argument);
 
 public:
         // Métodos de acesso.
 
-        void setTitulo(String) throw (invalid_argument);
+        void setTitulo(string) throw (invalid_argument);
 
-        String getTitulo() const {
-            return tirulo;
+        string getTitulo() const {
+            return titulo;
         }
 };
 
 class Codigo {
 private:
-        String codigo;
+        string codigo;
 
         const static int TAMANHO = 5;
 
         // Método responsável por validação.
 
-        void validarCodigo(String) throw (invalid_argument);
+        void validarCodigo(string) throw (invalid_argument);
 
 public:
         // Métodos de acesso.
 
-        void setCodigo(String) throw (invalid_argument);
+        void setCodigo(string) throw (invalid_argument);
 
-        String getCodigo() const {
+        string getCodigo() const {
             return codigo;
         }
 };
 
 class GeneroLiterario {
 private:
-        String generoLiterario;
+        string generoLiterario;
 
         // Método responsável por validação.
 
-        void validarGeneroLiterario(String) throw (invalid_argument);
+        void validarGeneroLiterario(string) throw (invalid_argument);
 
 public:
         // Métodos de acesso.
 
-        void setGeneroLiterario(String) throw (invalid_argument);
+        void setGeneroLiterario(string) throw (invalid_argument);
 
-        String getGeneroLiterario() const {
+        string getGeneroLiterario() const {
             return generoLiterario;
         }
+
 };
+
+#endif // DOMINIOS_H_INCLUDED
