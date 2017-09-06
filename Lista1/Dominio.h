@@ -2,6 +2,7 @@
 #define DOMINIOS_H_INCLUDED
 
 #include <stdexcept>
+#include <string.h>
 
 using namespace std;
 
@@ -102,6 +103,72 @@ public:
             return generoLiterario;
         }
 
+};
+
+class Apelido{
+
+private:
+
+    std::string apelido;
+
+    const static int LIMITE_APELIDO = 5;
+    void validar(string) throw (invalid_argument);
+
+public:
+
+    void setApelido(string) throw (invalid_argument);
+
+    string getApelido() const {
+        return apelido;
+    }
+};
+
+class Senha{
+
+    private:
+
+    std::string senha;
+
+    const static int LIMITE_SENHA = 4;
+    void validar(string) throw (invalid_argument);
+
+
+public:
+
+
+    void setSenha(string) throw (invalid_argument);
+
+    string getSenha() const {
+        return senha;
+    }
+
+};
+
+class Data{
+private:
+    std::string data;
+    //const static int LIMITE_DIA1 = 3; //Constante que limita o algarismo das dezenas da parcela da string referente ao DIA.
+    //const static int LIMITE_DIA2 =
+    void validar(string)throw(invalid_argument);
+
+public:
+    void setData(string) throw (invalid_argument);
+    string setData() const{
+        return data;
+    }
+};
+
+class Texto{
+private:
+    std::string texto;
+    const static int LIMITE_TEXTO = 40;
+    void validar (string)throw (invalid_argument);
+
+public:
+    void setTexto(string) throw(invalid_argument);
+    string setTexto() const{
+        return texto;
+    }
 };
 
 #endif // DOMINIOS_H_INCLUDED
