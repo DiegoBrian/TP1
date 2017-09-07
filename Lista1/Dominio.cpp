@@ -96,6 +96,24 @@ void Codigo::setCodigo(string codigo) throw (invalid_argument){
     this->codigo = codigo;
 }
 
+void GeneroLiterario::validarGeneroLiterario(string generoLiterario) throw (invalid_argument){
+
+    //Lança exceção se o genero literario nao estiver de acordo com as opções definidas
+    if(generoLiterario.compare("Epopeia") != 0 &&
+       generoLiterario.compare("Novela") != 0 &&
+       generoLiterario.compare("Conto") != 0 &&
+       generoLiterario.compare("Ensaio") != 0 &&
+       generoLiterario.compare("Romance") != 0){
+            throw invalid_argument("Argumento invalido.");
+       }
+}
+
+void GeneroLiterario::setGeneroLiterario(string generoLiterario) throw (invalid_argument){
+    validarGeneroLiterario(generoLiterario);
+    this->generoLiterario = generoLiterario;
+}
+
+
 void Apelido::validar (string apelido) throw (invalid_argument){
     unsigned int i;
     if (apelido.length()>LIMITE_APELIDO){
