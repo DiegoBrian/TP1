@@ -176,5 +176,141 @@ public:
     int run();
 };
 
+class TUApelido {
+
+private:
+
+    // Definições de constantes para evitar numeros mágicos.
+
+    const static string APELIDO_VALIDO;
+    const static string APELIDO_INVALIDO;
+
+    // Referência para o objeto a ser testado.
+
+    Apelido *apelido;
+
+    // Estado do teste.
+
+    int estado;
+
+    // Declarações de métodos.
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+
+    // Definições de constantes para reportar resultado do teste.
+
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+
+    int run();
+};
+
+class TUSenha {
+
+private:
+
+    // Definições de constantes para evitar numeros mágicos.
+
+    const static string SENHA_VALIDA;
+    const static string SENHA_INVALIDA;
+
+    // Referência para o objeto a ser testado.
+
+    Senha *senha;
+
+    // Estado do teste.
+
+    int estado;
+
+    // Declarações de métodos.
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+
+    // Definições de constantes para reportar resultado do teste.
+
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+
+    int run();
+};
+
+class TUData {
+
+private:
+
+    // Definições de constantes para evitar numeros mágicos.
+
+    const static string DATA_VALIDA;
+    const static string DATA_INVALIDA;
+
+    // Referência para o objeto a ser testado.
+
+    Data *data;
+
+    // Estado do teste.
+
+    int estado;
+
+    // Declarações de métodos.
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+
+    // Definições de constantes para reportar resultado do teste.
+
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+
+    int run();
+};
+
+class TUTexto {
+
+private:
+
+    // Definições de constantes para evitar numeros mágicos.
+
+    const static string TEXTO_VALIDO;
+    const static string TEXTO_INVALIDO;
+
+    // Referência para o objeto a ser testado.
+
+    Texto *texto;
+
+    // Estado do teste.
+
+    int estado;
+
+    // Declarações de métodos.
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+
+    // Definições de constantes para reportar resultado do teste.
+
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+
+    int run();
+};
+
 #endif // TESTES_H_INCLUDED
 

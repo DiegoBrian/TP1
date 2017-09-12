@@ -55,5 +55,45 @@ int main()
         case TUGeneroLiterario::FALHA  : cout << "FALHA" << endl;
                                 break;
     }
+
+
+        TUApelido testeApelido;
+
+    switch(testeApelido.run()){
+        case TUApelido::SUCESSO: cout << "SUCESSO" << endl;
+                                break;
+        case TUApelido::FALHA  : cout << "FALHA" << endl;
+                                break;
+    }
+
+    TUSenha testeSenha;
+
+    switch(testeSenha.run()){
+        case TUSenha::SUCESSO: cout << "SUCESSO" << endl;
+                                break;
+        case TUSenha::FALHA  : cout << "FALHA" << endl;
+                                break;
+    }
+
+    TUData testeData;
+
+    switch(testeData.run()){
+        case TUData::SUCESSO: cout << "SUCESSO" << endl;
+                                break;
+        case TUData::FALHA  : cout << "FALHA" << endl;
+                                break;
+    }
+
+    TUTexto testeTexto;
+
+    switch(testeTexto.run()){
+        case TUTexto::SUCESSO: cout << "SUCESSO" << endl;
+                                break;
+        case TUTexto::FALHA  : cout << "FALHA" << endl;
+                                break;
+    }
+
+
+
     return 0;
 }

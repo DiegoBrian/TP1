@@ -153,7 +153,7 @@ private:
 
 public:
     void setData(string) throw (invalid_argument);
-    string setData() const{
+    string getData() const{
         return data;
     }
 };
@@ -166,7 +166,7 @@ private:
 
 public:
     void setTexto(string) throw(invalid_argument);
-    string setTexto() const{
+    string getTexto() const{
         return texto;
     }
 };

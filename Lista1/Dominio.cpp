@@ -136,18 +136,21 @@ void Senha::validar (string senha) throw (invalid_argument){
     if (senha.length()>LIMITE_SENHA){
         throw invalid_argument ("Argumento invalido.");
     }
+
     for (i=0; i<senha.length(); i++){
         if (senha[i]<65 || (senha[i]>90 && senha[i]<97) || senha[i]>122){
             throw invalid_argument ("Argumento invalido.");
         }
     }
+
     for(i=0; i<senha.length(); i++){
         for(j=0; j<senha.length(); j++){
-            if(senha[j]==senha[i]){
+            if(i!=j && senha[j]==senha[i]){
                 throw invalid_argument("Argumento invalido.");
             }
         }
     }
+
 }
 
 void Senha::setSenha (string senha) throw (invalid_argument){
@@ -156,24 +159,24 @@ void Senha::setSenha (string senha) throw (invalid_argument){
 }
 
 void Data::validar (string data) throw (invalid_argument){
-    unsigned int i;
-    for(i=0; i<data.length(); i++){
-        if(data[0]<0 || data[0]>3){
+    //unsigned int i;
+    //for(i=0; i<data.length(); i++){
+        if(data[0]<'0' || data[0]>'3'){
             throw invalid_argument("Argumento invalido.");
         }
-        if(data[0] == 3 && data[1]>1){
+        if(data[0] == '3' && data[1]>'1'){
             throw invalid_argument("Argumento invalido.");
         }
         if(data[2]!='/' || data[5]!='/'){
             throw invalid_argument("Argumento invalido.");
         }
-        if(data[3]<0 || data[3]>1){
+        if(data[3]<'0' || data[3]>'1'){
             throw invalid_argument("Argumento invalido.");
         }
-        if(data[3] == 1 && data[4]>2){
+        if(data[3] == '1' && data[4]>'2'){
             throw invalid_argument("Argumento invalido.");
         }
-    }
+    //}
 }
 
 
@@ -182,7 +185,7 @@ void Data::setData(string data) throw (invalid_argument){
     this->data = data;
 }
 
-void Texto::validar (string data) throw (invalid_argument){
+void Texto::validar (string texto) throw (invalid_argument){
     if(texto.length()>LIMITE_TEXTO){
         throw invalid_argument("Argumento invalido.");
     }
