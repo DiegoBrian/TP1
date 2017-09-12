@@ -93,7 +93,13 @@ int main()
                                 break;
     }
 
+    TUUsuario testeUsuario;
 
-
+    switch(testeUsuario.run()){
+        case TUUsuario::SUCESSO: cout << "SUCESSO" << endl;
+                                break;
+        case TUUsuario::FALHA  : cout << "FALHA" << endl;
+                                break;
+    }
     return 0;
 }

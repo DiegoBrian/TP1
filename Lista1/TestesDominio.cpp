@@ -329,7 +329,7 @@ void TUData::testarCenarioFalha(){
 int TUData::run(){
     setUp();
     testarCenarioSucesso();
-    //testarCenarioFalha();
+    testarCenarioFalha();
     tearDown();
     return estado;
 }

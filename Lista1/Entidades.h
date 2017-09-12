@@ -90,6 +90,13 @@ private:
 
 public:
 
+    /*Usuario (const Nome &nome, const Apelido &apelido, const Telefone &telefone, const Senha &senha){
+        setNome(nome);
+        setApelido(apelido);
+        setTelefone(telefone);
+        setSenha(senha);
+    }*/
+
     void setNome(const Nome &nome){
         this->nome = nome;
     }
