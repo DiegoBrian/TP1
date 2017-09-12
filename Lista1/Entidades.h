@@ -61,5 +61,67 @@ public:
     }
 };
 
+class Resenha{
+
+private:
+
+    Texto texto;
+
+public:
+
+    void setTexto(const Texto &texto){
+        this->texto = texto;
+    }
+
+    Texto getTexto() const {
+        return texto;
+    }
+
+};
+
+class Usuario{
+
+private:
+
+    Nome nome;
+    Apelido apelido;
+    Telefone telefone;
+    Senha senha;
+
+public:
+
+    void setNome(const Nome &nome){
+        this->nome = nome;
+    }
+
+    Nome getNome() const {
+        return nome;
+    }
+
+    void setApelido(const Apelido &apelido){
+        this->apelido = apelido;
+    }
+
+    Apelido getApelido() const {
+        return apelido;
+    }
+
+    void setTelefone(const Telefone &telefone){
+        this->telefone = telefone;
+    }
+
+    Telefone getTelefone() const {
+        return telefone;
+    }
+
+    void setSenha(const Senha &senha){
+        this->senha = senha;
+    }
+
+    Senha getSenha() const {
+        return senha;
+    }
+};
+
 #endif // ENTIDADES_H_INCLUDED
 

@@ -14,7 +14,7 @@ void Nome::validarNome(string nome) throw (invalid_argument){
     // Lança exceção se a string não é formada por letras, espaço em branco, ou ponto
     for (unsigned int i = 0; i < nome.length(); i++){
     	if ((nome[i] != ' ') && (nome[i] != '.') &&
-    		(nome[i] < 'A' || (nome[i] > 'Z' && nome[i] < 'a') || nome[i] > 'Z') ){
+    		(nome[i] < 'A' || nome[i] > 'Z') && (nome[i] < 'a' || nome[i] > 'z')){
     		throw invalid_argument("Argumento invalido.");
     	}
     }
@@ -37,13 +37,13 @@ void Telefone::validarTelefone(string telefone) throw (invalid_argument){
         throw invalid_argument("Argumento invalido.");
 
     for (unsigned int i = 1; i <= 2; i++){
-    	if (telefone[i] < 48 || telefone[i]> 57){
+    	if (telefone[i] < '0' || telefone[i]> '9'){
     		throw invalid_argument("Argumento invalido.");
     	}
     }
 
-    for (unsigned int i = 4; i < telefone.length(); i++){
-    	if (telefone[i] < 48 || telefone[i]> 57){
+    for (unsigned int i = 5; i < telefone.length(); i++){
+    	if (telefone[i] < '0' || telefone[i]> '9'){
     		throw invalid_argument("Argumento invalido.");
     	}
     }
