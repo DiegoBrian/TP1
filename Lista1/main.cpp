@@ -94,7 +94,7 @@ int main()
         case TUTexto::FALHA  : cout << "Texto - FALHA" << endl;
                                 break;
     }
-
+    cout << endl;
     cout << "Testes de Entidades" << endl;
 
 
