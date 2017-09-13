@@ -1,6 +1,9 @@
 #include "TestesDominio.h"
 
-// Definições de métodos.
+// DefiniÃ§Ãµes de mÃ©todos.
+
+    const string TUNome::NOME_VALIDO   = "";
+    const string TUNome::NOME_INVALIDO = "123456789";
 
 void TUNome::setUp(){
     nome = new Nome();
@@ -40,7 +43,8 @@ int TUNome::run(){
     return estado;
 }
 
-//
+    const string TUTelefone::TELEFONE_VALIDO   = "(61)-123456789";
+    const string TUTelefone::TELEFONE_INVALIDO = "123456789";
 
 void TUTelefone::setUp(){
     telefone = new Telefone();
@@ -80,7 +84,8 @@ int TUTelefone::run(){
     return estado;
 }
 
-//
+    const string TUTitulo::TITULO_VALIDO   = "Teste de Titulo";
+    const string TUTitulo::TITULO_INVALIDO = "Titulo  invalido";
 
 void TUTitulo::setUp(){
     titulo = new Titulo();
@@ -120,7 +125,8 @@ int TUTitulo::run(){
     return estado;
 }
 
-//
+    const string TUCodigo::VALOR_VALIDO   = "12345";
+    const string TUCodigo::VALOR_INVALIDO = "123456";
 
 void TUCodigo::setUp(){
     codigo = new Codigo();
@@ -160,7 +166,10 @@ int TUCodigo::run(){
     return estado;
 }
 
-//
+// Definiï¿½ï¿½es de constantes para evitar numeros mï¿½gicos.
+
+    const string TUGeneroLiterario::GENERO_VALIDO = "Novela";
+    const string TUGeneroLiterario::GENERO_INVALIDO = "Comedia";
 
 void TUGeneroLiterario::setUp(){
     generoLiterario = new GeneroLiterario();
@@ -202,7 +211,7 @@ int TUGeneroLiterario::run(){
 
 const string TUApelido::APELIDO_VALIDO = ("ABCDE");
 const string TUApelido::APELIDO_INVALIDO = ("876578");
-// Definições de métodos.
+// DefiniÃ§Ãµes de mÃ©todos.
 
 void TUApelido::setUp(){
     apelido = new Apelido();

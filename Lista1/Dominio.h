@@ -7,7 +7,7 @@
 using namespace std;
 /**
      *  @class Nome
-     *  Delimitação da classe referente ao campo do nome do usuário.
+     *  Delimitação da classe referente ao campo do nome do usuario.
      */
 class Nome {
 private:
@@ -15,14 +15,16 @@ private:
 
         const static int TAMANHO_MAXIMO = 15;
 
-        /** Método responsável por validação.*/
+        /** Metodo responsável por validacao.*/
 
         void validarNome(string) throw (invalid_argument);
 
 public:
-        /** Métodos de acesso.*/
+        /** Mtodo de acesso.*/
 
         void setNome(string) throw (invalid_argument);
+
+        /** Metodo de acesso.*/
 
         string getNome() const {
             return nome;
@@ -31,7 +33,7 @@ public:
 
 /**
      *  @class Telefone
-     *  Delimitação da classe referente ao campo do telefone do usuário.
+     *  Delimitação da classe referente ao campo do telefone do usuario.
      */
 
 class Telefone {
@@ -40,14 +42,16 @@ private:
 
         const static int TAMANHO = 14;
 
-        /** Método responsável por validação.*/
+        /** Metodo responsável por validacao.*/
 
         void validarTelefone(string) throw (invalid_argument);
 
 public:
-        /** Métodos de acesso.*/
+        /** Metodo de acesso.*/
 
         void setTelefone(string) throw (invalid_argument);
+
+        /** Metodo de acesso.*/
 
         string getTelefone() const {
             return telefone;
@@ -55,7 +59,7 @@ public:
 };
 
 /**
-     *  @class Título
+     *  @class Titulo
      *  Delimitação da classe referente ao campo do título do livro.
      */
 
@@ -65,14 +69,16 @@ private:
 
         const static int TAMANHO_MAXIMO = 20;
 
-        /** Método responsável por validação.*/
+        /** Metodo responsável por validacao.*/
 
         void validarTitulo(string) throw (invalid_argument);
 
 public:
-        /** Métodos de acesso.*/
+        /** Metodo de acesso.*/
 
         void setTitulo(string) throw (invalid_argument);
+
+        /** Metodo de acesso.*/
 
         string getTitulo() const {
             return titulo;
@@ -90,14 +96,16 @@ private:
 
         const static int TAMANHO = 5;
 
-        /** Método responsável por validação.*/
+        /** Metodo responsável por validacao.*/
 
         void validarCodigo(string) throw (invalid_argument);
 
 public:
-        /** Métodos de acesso.*/
+        /** Metodo de acesso.*/
 
         void setCodigo(string) throw (invalid_argument);
+
+        /** Metodo de acesso.*/
 
         string getCodigo() const {
             return codigo;
@@ -106,21 +114,23 @@ public:
 
 /**
      *  @class GeneroLiterario
-     *  Delimitação da classe referente ao campo do gênero literário do livro.
+     *  Delimitação da classe referente ao campo do gênero literario do livro.
      */
 
 class GeneroLiterario {
 private:
         string generoLiterario;
 
-        /** Método responsável por validação.*/
+        /** Metodo responsável por validacao.*/
 
         void validarGeneroLiterario(string) throw (invalid_argument);
 
 public:
-        /** Métodos de acesso.*/
+        /** Metodo de acesso.*/
 
         void setGeneroLiterario(string) throw (invalid_argument);
+
+        /** Metodo de acesso.*/
 
         string getGeneroLiterario() const {
             return generoLiterario;
@@ -130,7 +140,7 @@ public:
 
 /**
      *  @class Apelido
-     *  Delimitação da classe referente ao campo do apelido do usuário.
+     *  Delimitação da classe referente ao campo do apelido do usuario.
      */
 
 class Apelido{
@@ -141,15 +151,17 @@ private:
 
     const static int LIMITE_APELIDO = 5;
 
-     /** Método responsável por validação.*/
+     /** Metodo responsável por validacao.*/
 
     void validar(string) throw (invalid_argument);
 
 public:
 
-    /** Métodos de acesso.*/
+    /** Metodo de acesso.*/
 
     void setApelido(string) throw (invalid_argument);
+
+    /** Metodo de acesso.*/
 
     string getApelido() const {
         return apelido;
@@ -158,7 +170,7 @@ public:
 
 /**
      *  @class Senha
-     *  Delimitação da classe referente ao campo da senha do usuário.
+     *  Delimitação da classe referente ao campo da senha do usuario.
      */
 
 class Senha{
@@ -169,16 +181,18 @@ class Senha{
 
     const static int LIMITE_SENHA = 4;
 
-     /** Método responsável por validação.*/
+     /** Metodo responsável por validacao.*/
 
     void validar(string) throw (invalid_argument);
 
 
 public:
 
-    /** Métodos de acesso.*/
+    /** Metodo de acesso.*/
 
     void setSenha(string) throw (invalid_argument);
+
+    /** Metodo de acesso.*/
 
     string getSenha() const {
         return senha;
@@ -195,22 +209,24 @@ class Data{
 private:
     std::string data;
 
-     /** Método responsável por validação.*/
+     /** Metodo responsável por validacao.*/
 
     void validar(string)throw(invalid_argument);
 
 public:
 
-    /** Métodos de acesso.*/
+    /** Metodo de acesso.*/
 
     void setData(string) throw (invalid_argument);
+
+    /** Metodo de acesso.*/
 
     string getData() const{
         return data;
     }
 };
 
-/**
+    /**
      *  @class Texto
      *  Delimitação da classe referente ao campo do texto da resenha do livro.
      */
@@ -220,15 +236,17 @@ private:
     std::string texto;
     const static int LIMITE_TEXTO = 40;
 
-    /** Método responsável por validação.*/
+    /** Metodo responsável por validacao.*/
 
     void validar (string)throw (invalid_argument);
 
 public:
 
-    /** Métodos de acesso.*/
+    /** Metodo de acesso.*/
 
     void setTexto(string) throw(invalid_argument);
+
+    /** Metodo de acesso.*/
 
     string getTexto() const{
         return texto;

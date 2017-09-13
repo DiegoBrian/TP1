@@ -1,5 +1,13 @@
 #include "TestesEntidades.h"
 #include<iostream>
+
+// Definições de constantes para evitar numeros mágicos.
+
+const string TUUsuario::NOME_VALIDO   = "Diego";
+const string TUUsuario::APELIDO_VALIDO   = "dbcl";
+const string TUUsuario::TELEFONE_VALIDO   = "(61)-123456789";
+const string TUUsuario::SENHA_VALIDA   = "ABCD";
+
 // Definições de métodos.
 
 void TUUsuario::setUp(){
@@ -46,7 +54,14 @@ int TUUsuario::run(){
     return estado;
 }
 
-//
+// Definições de constantes para evitar numeros mágicos.
+
+const string TULivro::TITULO_VALIDO   = "Titulo Valido";
+const string TULivro::AUTOR_VALIDO = "Autor";
+const string TULivro::DATA_VALIDA   = "01/02/03";
+const string TULivro::VALOR_VALIDO   = "12345";
+const string TULivro::GENERO_VALIDO   = "Novela";
+
 
 void TULivro::setUp(){
     livro = new Livro();
@@ -93,6 +108,9 @@ int TULivro::run(){
     return estado;
 }
 
+// Definições de constantes para evitar numeros mágicos.
+
+const string TUResenha::TEXTO_VALIDO   = "Hello, world";
 
 void TUResenha::setUp(){
     resenha = new Resenha();

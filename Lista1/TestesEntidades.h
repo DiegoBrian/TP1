@@ -7,6 +7,11 @@ using namespace std;
 
 // Declaração de classe.
 
+    /**
+     *  @class TUUsuario
+     *  Teste de unidade referente a classe Usuario
+     */
+
 class TUUsuario {
 
 private:
@@ -18,10 +23,10 @@ private:
 
     // Definições de constantes para evitar numeros mágicos.
 
-    std::string NOME_VALIDO   = "Diego";
-    std::string APELIDO_VALIDO   = "dbcl";
-    std::string TELEFONE_VALIDO   = "(61)-123456789";
-    std::string SENHA_VALIDA   = "ABCD";
+    const static string NOME_VALIDO;
+    const static string APELIDO_VALIDO;
+    const static string TELEFONE_VALIDO;
+    const static string SENHA_VALIDA;
 
     // Referência para o objeto a ser testado.
 
@@ -44,11 +49,18 @@ public:
     const static int SUCESSO =  0;
     const static int FALHA   = -1;
 
+    /** Executa o teste, retornando SUCESSO ou FALHA*/
+
     int run();
 };
 
 
 // Declaração de classe.
+
+    /**
+     *  @class TUResenha
+     *  Teste de unidade referente a classe Resenha
+     */
 
 class TUResenha {
 
@@ -59,7 +71,7 @@ private:
 
     // Definições de constantes para evitar numeros mágicos.
 
-    std::string TEXTO_VALIDO   = "Hello, world";
+    const static string TEXTO_VALIDO;
 
     // Referência para o objeto a ser testado.
 
@@ -82,10 +94,17 @@ public:
     const static int SUCESSO =  0;
     const static int FALHA   = -1;
 
+    /** Executa o teste, retornando SUCESSO ou FALHA*/
+
     int run();
 };
 
 //
+
+    /**
+     *  @class TULivro
+     *  Teste de unidade referente a classe Livro
+     */
 
 class TULivro {
 
@@ -99,11 +118,11 @@ private:
 
     // Definições de constantes para evitar numeros mágicos.
 
-    std::string TITULO_VALIDO   = "Titulo Valido";
-    std::string AUTOR_VALIDO = "Autor";
-    std::string DATA_VALIDA   = "01/02/03";
-    std::string VALOR_VALIDO   = "12345";
-    std::string GENERO_VALIDO   = "Novela";
+    const static string TITULO_VALIDO;
+    const static string AUTOR_VALIDO;
+    const static string DATA_VALIDA;
+    const static string VALOR_VALIDO;
+    const static string GENERO_VALIDO;
 
     // Referência para o objeto a ser testado.
 
@@ -125,6 +144,8 @@ public:
 
     const static int SUCESSO =  0;
     const static int FALHA   = -1;
+
+    /** Executa o teste, retornando SUCESSO ou FALHA*/
 
     int run();
 };
