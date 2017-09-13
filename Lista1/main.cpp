@@ -101,5 +101,14 @@ int main()
         case TUUsuario::FALHA  : cout << "FALHA" << endl;
                                 break;
     }
+
+    TULivro testeLivro;
+
+    switch(testeLivro.run()){
+        case TULivro::SUCESSO: cout << "SUCESSO" << endl;
+                                break;
+        case TULivro::FALHA  : cout << "FALHA" << endl;
+                                break;
+    }
     return 0;
 }

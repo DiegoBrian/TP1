@@ -4,6 +4,7 @@
 
 // Definições de métodos.
 
+
 void Nome::validarNome(string nome) throw (invalid_argument){
 
     // Lança exceção se o tamanho da string for maior que o tamanho maximo definido.

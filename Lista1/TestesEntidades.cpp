@@ -47,3 +47,48 @@ int TUUsuario::run(){
 }
 
 //
+
+void TULivro::setUp(){
+    livro = new Livro();
+
+    titulo.setTitulo(TITULO_VALIDO);
+//    nomeAutor.setNomeAutor(AUTOR_VALIDO);
+    data.setData(DATA_VALIDA);
+    codigo.setCodigo(VALOR_VALIDO);
+    generoLiterario.setGeneroLiterario(GENERO_VALIDO);
+
+    estado = SUCESSO;
+}
+
+void TULivro::tearDown(){
+    delete livro;
+}
+
+void TULivro::testarCenarioSucesso(){
+    try{
+        livro->setTitulo(titulo);
+        if (livro->getTitulo().getTitulo() != titulo.getTitulo())
+            estado = FALHA;
+        livro->setData(data);
+        if (livro->getData().getData() != data.getData() )
+            estado = FALHA;
+        livro->setCodigo(codigo);
+        if (livro->getCodigo().getCodigo() != codigo.getCodigo() )
+            estado = FALHA;
+        livro->setGeneroLiterario(generoLiterario);
+        if (livro->getGeneroLiterario().getGeneroLiterario() != generoLiterario.getGeneroLiterario())
+            estado = FALHA;
+
+
+    }
+    catch(invalid_argument excecao){
+        estado = FALHA;
+    }
+}
+
+int TULivro::run(){
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}

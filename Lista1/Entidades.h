@@ -14,7 +14,7 @@ private:
 
     Titulo titulo;
     Nome nomeAutor;
-    Data dataPublicacao;
+    Data data;
     Codigo codigo;
     GeneroLiterario generoLiterario;
 
@@ -36,12 +36,12 @@ public:
         return nomeAutor;
     }
 
-    void setDataPublicacao(const Data &dataPublicacao){
-        this->dataPublicacao = dataPublicacao;
+    void setData(const Data &data){
+        this->data = data;
     }
 
-    Data getDataPublicacao() const {
-        return dataPublicacao;
+    Data getData() const {
+        return data;
     }
 
     void setCodigo(const Codigo &codigo){
