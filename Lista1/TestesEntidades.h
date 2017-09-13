@@ -53,7 +53,10 @@ public:
 class TUResenha {
 
 private:
+    //Componentes de uma resenha
 
+    Texto texto;
+    
     // Referência para o objeto a ser testado.
 
     Resenha *resenha;
