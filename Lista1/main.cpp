@@ -5,6 +5,10 @@
 #include "TestesDominio.h"
 #include "TestesEntidades.h"
 
+/** @author Aécio Fernandes Galiza Magalhães - 15/0115121
+*   @author Diego Brian Coelho Leite - 14/0136371
+*/
+
 
 using namespace std;
 
