@@ -56,7 +56,11 @@ private:
     //Componentes de uma resenha
 
     Texto texto;
-    
+
+    // Definições de constantes para evitar numeros mágicos.
+
+    std::string TEXTO_VALIDO   = "Hello, world";
+
     // Referência para o objeto a ser testado.
 
     Resenha *resenha;
