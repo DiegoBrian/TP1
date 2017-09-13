@@ -92,3 +92,35 @@ int TULivro::run(){
     tearDown();
     return estado;
 }
+
+
+void TUResenha::setUp(){
+    resenha = new Resenha();
+
+    texto.setTexto(TEXTO_VALIDO);
+
+    estado = SUCESSO;
+}
+
+void TUResenha::tearDown(){
+    delete resenha;
+}
+
+void TUResenha::testarCenarioSucesso(){
+    try{
+        resenha->setTexto(texto);
+        if (resenha->getTexto().getTexto() != texto.getTexto())
+            estado = FALHA;
+
+    }
+    catch(invalid_argument excecao){
+        estado = FALHA;
+    }
+}
+
+int TUResenha::run(){
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}
