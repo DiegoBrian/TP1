@@ -147,7 +147,7 @@ class Apelido{
 
 private:
 
-    std::string apelido;
+    string apelido;
 
     const static int LIMITE_APELIDO = 5;
 
@@ -159,8 +159,9 @@ public:
 
     /** Metodo de acesso.*/
 
-    void setApelido(string) throw (invalid_argument);
+    const static string APELIDO_INVALIDO;
 
+    void setApelido(string) throw (invalid_argument);
     /** Metodo de acesso.*/
 
     string getApelido() const {
@@ -191,7 +192,7 @@ public:
     /** Metodo de acesso.*/
 
     void setSenha(string) throw (invalid_argument);
-
+    const static string SENHA_INVALIDA;
     /** Metodo de acesso.*/
 
     string getSenha() const {

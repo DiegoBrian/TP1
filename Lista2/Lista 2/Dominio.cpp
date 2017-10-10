@@ -2,6 +2,8 @@
 #include "Dominio.h"
 
 //Definições de constantes.
+const string Apelido::APELIDO_INVALIDO = "12345";
+const string Senha::SENHA_INVALIDA = "AAS8";
 
 // Definições de métodos.
 
