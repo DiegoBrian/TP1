@@ -1,4 +1,4 @@
-#include "miuautenticacao.h"
+#include "controladoras.h"
 
 ResultadoAutenticacao CntrIUAutenticacao::autenticar() throw(runtime_error) {
 
@@ -27,15 +27,16 @@ ResultadoAutenticacao CntrIUAutenticacao::autenticar() throw(runtime_error) {
         }
     }
 
-    // Solicitar autenticação.
+    // Solicitar autenticaï¿½ï¿½o.
 
     resultado = cntrLNAutenticacao->autenticar(apelido, senha);
 
-    // Informar resultado da autenticação.
+    // Informar resultado da autenticaï¿½ï¿½o.
 
     if(resultado.getValor() == ResultadoAutenticacao::FALHA)
     cout << endl << "Falha na autenticacao." << endl;
 
     return resultado;
 }
+
 
