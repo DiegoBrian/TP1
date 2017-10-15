@@ -7,14 +7,14 @@ ResultadoAutenticacao CntrIUAutenticacao::autenticar() throw(runtime_error) {
     Senha senha;
     std::string entrada;
 
-    // Solicitar matricula e senha.
+    // Solicitar apelido e senha.
 
     while(true) {
 
         cout << endl << "Autenticacao de usuario." << endl << endl;
 
         try {
-            cout << "Digite a matricula : ";
+            cout << "Digite o apelido : ";
             cin >> entrada;
             apelido.setApelido(entrada);
             cout << "Digite a senha     : ";
@@ -23,7 +23,7 @@ ResultadoAutenticacao CntrIUAutenticacao::autenticar() throw(runtime_error) {
             break;
         }
         catch (const invalid_argument &exp) {
-            cout << endl << "Dado em formato incorreto." << endl;
+            cout << endl << "Dado em formato incorreto ou dado invalido." << endl;
         }
     }
 
@@ -39,4 +39,38 @@ ResultadoAutenticacao CntrIUAutenticacao::autenticar() throw(runtime_error) {
     return resultado;
 }
 
+ResultadoEstante CntrIUEstante::buscar() throw(runtime_error) {
+
+    ResultadoEstante resultado;
+    Titulo titulo;
+    std::string entrada;
+
+    // Solicitar titulo.
+
+    while(true) {
+
+        cout << endl << "Estante de usuario." << endl << endl;
+
+        try {
+            cout << "Digite o titulo do livro : ";
+            cin >> entrada;
+            titulo.setTitulo(entrada);
+            break;
+        }
+        catch (const invalid_argument &exp) {
+            cout << endl << "Dado em formato incorreto ou dado invalido." << endl;
+        }
+    }
+
+    // Solicitar titulo.
+
+    resultado = cntrLNEstante->buscar(titulo);
+
+    // Informar resultado da busca.
+
+    if(resultado.getValor() == ResultadoEstante::FALHA)
+    cout << endl << "Falha na busca." << endl;
+
+    return resultado;
+}
 

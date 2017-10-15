@@ -7,7 +7,7 @@
 #include "Dominio.h"
 #include "Entidades.h"
 #include "interfaces.h"
-#include "miuautenticacao.h"
+#include "controladoras.h"
 #include "stubs.h"
 
 using namespace std;
@@ -24,6 +24,8 @@ int main()
 
     IUAutenticacao  *cntrIUAutenticacao = new CntrIUAutenticacao();
     ILNAutenticacao *stubLNAutenticacao = new StubLNAutenticacao();
+    IUEstante  *cntrIUEstante = new CntrIUEstante();
+    ILNEstante *stubLNEstante = new StubLNEstante();
 
     // Liga instância da controladora de interacao a instância do stub na camada de serviço.
 
@@ -38,6 +40,7 @@ int main()
     cout << "Trigger de erro de sistema  = " << StubLNAutenticacao::TRIGGER_ERRO_SISTEMA << endl;
 
     ResultadoAutenticacao resultado;
+    ResultadoEstante resultado2;
 
     while(true){
 
@@ -61,6 +64,30 @@ int main()
             break;
         }
     }
+
+    while(true){
+
+        // Simula a tela de busca por titulo.
+
+        cout << endl << "Tela de busca por titulo." << endl;
+
+        try{
+
+            // Ilustra soliciatacao de serviço de busca.
+
+            resultado2 = cntrIUEstante->buscar();
+        }
+        catch(const runtime_error &exp){
+                 cout << "Erro de sistema." << endl;
+        }
+
+        // Critica o resultado da busca na estante.
+
+        if(resultado2.getValor() == ResultadoEstante::SUCESSO) {
+            break;
+        }
+    }
+
 
     return 0;
 }

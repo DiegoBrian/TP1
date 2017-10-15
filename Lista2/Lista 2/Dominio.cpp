@@ -2,8 +2,8 @@
 #include "Dominio.h"
 
 //Definições de constantes.
-const string Apelido::APELIDO_INVALIDO = "12345";
-const string Senha::SENHA_INVALIDA = "AAS8";
+const string Apelido::APELIDO_INVALIDO = "teste";
+const string Senha::SENHA_INVALIDA = "inva";
 
 // Definições de métodos.
 
@@ -128,6 +128,9 @@ void Apelido::validar (string apelido) throw (invalid_argument){
             throw invalid_argument ("Argumento invalido.");
         }
     }
+     if(apelido.compare(APELIDO_INVALIDO)==0){
+            throw invalid_argument("Erro parametro.");
+    }
 }
 
 void Apelido::setApelido(string apelido) throw (invalid_argument){
@@ -153,6 +156,9 @@ void Senha::validar (string senha) throw (invalid_argument){
                 throw invalid_argument("Argumento invalido.");
             }
         }
+    }
+    if(senha.compare(SENHA_INVALIDA)==0){
+            throw invalid_argument("Erro parametro.");
     }
 
 }

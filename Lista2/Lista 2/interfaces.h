@@ -33,5 +33,30 @@ public:
     virtual ResultadoAutenticacao autenticar(const Apelido&, const Senha&) throw(runtime_error)= 0;
 };
 
+
+
+class ILNEstante;
+
+// Declaração de interface para serviço de autenticação na camada de apresentação.
+
+class IUEstante {
+public:
+
+    // Método por meio do qual é solicitada Estante.
+
+    virtual ResultadoEstante buscar() throw(runtime_error) = 0;
+
+    // Método por meio do qual é estabelecida ligação (link) com a controladora na camada de serviço.
+
+    virtual void setCntrLNEstante(ILNEstante *) = 0;
+};
+
+// Declaração de interface para serviço de autenticação na camada de serviço.
+
+class ILNEstante {
+public:
+    virtual ResultadoEstante buscar(const Titulo&) throw(runtime_error)= 0;
+};
+
 #endif // INTERFACES_H_INCLUDED
 

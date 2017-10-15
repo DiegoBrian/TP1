@@ -31,6 +31,29 @@ void inline CntrIUAutenticacao::setCntrLNAutenticacao(ILNAutenticacao *cntrLNAut
         this->cntrLNAutenticacao = cntrLNAutenticacao;
 }
 
+
+
+
+class CntrIUEstante:public IUEstante {
+
+private:
+
+    // Refer�ncia para servidor.
+
+    ILNEstante *cntrLNEstante;
+
+public:
+
+    ResultadoEstante buscar() throw(runtime_error);
+
+    void setCntrLNEstante(ILNEstante*);
+};
+
+
+void inline CntrIUEstante::setCntrLNEstante(ILNEstante *cntrLNEstante){
+        this->cntrLNEstante = cntrLNEstante;
+}
+
 #endif // CONTROLADORAS_H_INCLUDED
 
 

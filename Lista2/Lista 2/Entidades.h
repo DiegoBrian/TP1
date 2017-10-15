@@ -46,4 +46,22 @@ public:
     }
 };
 
+
+
+class ResultadoEstante:public Resultado {
+
+private:
+    Titulo titulo;
+
+public:
+    void setTitulo(const Titulo &titulo){      // passagem por referência.
+        this->titulo = titulo;
+    }
+
+    Titulo getTitulo() const {
+        return titulo;
+    }
+
+};
+
 #endif // ENTIDADES_H_INCLUDED
