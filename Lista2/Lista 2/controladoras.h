@@ -67,7 +67,14 @@ void inline CntrIUEstante::setCntrLNEstante(ILNEstante *cntrLNEstante){
         this->cntrLNEstante = cntrLNEstante;
 }
 
-// Declaração de classe controladora de interação para o serviço de cadastro de usuário.
+/**
+     *  @class CntrIUEstante
+     *  Declaração de classe controladora de interação para o serviço de cadastro de usuário. Esta classe implementa a interface
+     *  IUUsuarios. Dentre suas atribuicoes esta fazer a ligacao entre a camada de apresentacao e servico do servico
+     *  de cadastro de usuarios
+     */
+
+// 
 
 class CntrIUUsuarios:public IUUsuarios {
 

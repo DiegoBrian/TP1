@@ -9,7 +9,10 @@
 
 using namespace std;
 
-// Declaração de classe stub da interface ILNAutenticacao.
+/**
+     *  @class StubLNAutenticacao
+     *  Declaração de classe stub da interface ILNAutenticacao.
+     */
 
 class StubLNAutenticacao:public ILNAutenticacao{
 
@@ -25,6 +28,10 @@ public:
     ResultadoAutenticacao autenticar(const Apelido&, const Senha&) throw(runtime_error);
 };
 
+/**
+     *  @class StubLNEstante
+     *  Declaração de classe stub da interface ILNEstante.
+     */
 
 class StubLNEstante:public ILNEstante{
 
@@ -41,7 +48,10 @@ public:
     ResultadoEstante buscar(const Titulo&) throw(runtime_error);
 };
 
-// Declaração de classe stub da interface ISUsuarios.
+/**
+     *  @class StubLNUsuarios
+     *  Declaração de classe stub da interface ISUsuarios.
+     */
 
 class StubLNUsuarios:public ISUsuarios{
 

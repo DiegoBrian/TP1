@@ -12,7 +12,11 @@ using namespace std;
 
 class ILNAutenticacao;
 
-// Declaração de interface para serviço de autenticação na camada de apresentação.
+/**
+     *  @class IUAutenticacao
+     *  Declaração de interface para serviço de autenticação na camada de apresentacao
+     */
+
 
 class IUAutenticacao {
 public:
@@ -26,7 +30,12 @@ public:
     virtual void setCntrLNAutenticacao(ILNAutenticacao *) = 0;
 };
 
-// Declaração de interface para serviço de autenticação na camada de serviço.
+
+/**
+     *  @class ILNAutenticacao
+     *  Declaração de interface para serviço de autenticação na camada de serviço.
+     */
+
 
 class ILNAutenticacao {
 public:
@@ -37,7 +46,12 @@ public:
 
 class ILNEstante;
 
-// Declaração de interface para serviço de autenticação na camada de apresentação.
+
+/**
+     *  @class IUEstante
+     *  Declaração de interface para serviço de estantes virtuais na camada de apresentação.
+     */
+
 
 class IUEstante {
 public:
@@ -51,7 +65,10 @@ public:
     virtual void setCntrLNEstante(ILNEstante *) = 0;
 };
 
-// Declaração de interface para serviço de autenticação na camada de serviço.
+/**
+     *  @class ILNEstante
+     *  Declaração de interface para serviço de estantes virtuais na camada de serviço.
+     */
 
 class ILNEstante {
 public:
@@ -62,7 +79,11 @@ public:
 
 class ISUsuarios;
 
-// Declaração de interface para serviço de cadastro de usuário na camada de apresentação.
+/**
+     *  @class IUUsuarios
+     *  Declaração de interface para serviço de cadastro de usuário na camada de apresentação.
+     */
+
 
 class IUUsuarios {
 public:
@@ -76,7 +97,10 @@ public:
     virtual void setCntrSUsuarios(ISUsuarios *) = 0;
 };
 
-// Declaração de interface para serviço de cadastro de usuário na camada de serviço.
+/**
+     *  @class ISUsuarios
+     *  Declaração de interface para serviço de cadastro de usuário na camada de serviço.
+     */
 
 class ISUsuarios {
 public:

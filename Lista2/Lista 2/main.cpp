@@ -24,11 +24,14 @@
 
 using namespace std;
 
+/**
+     *  @class main
+     *  Classe controladora principal  Entre as suas atribuicoes esta fazer a montagem de todo o sistema e construir as 
+     *  telas de menu principal para a navegacao do usuario
+     */
+
 int main()
 {
-
-    // EXEMPLO
-    // -----------------------------------------------------------
 
     // Ligação entre controladora na camada de apresentação e stub.
 
@@ -128,11 +131,6 @@ int main()
                                  cout << "Erro de sistema." << endl;
                         }
 
-                        // Critica o resultado da busca na estante.
-
-                        //if(resultado2.getValor() == ResultadoEstante::SUCESSO) {
-                            //break;
-                        //}
                     }
                     else if(opcao2 == INCLUIR_LIVRO){
 
