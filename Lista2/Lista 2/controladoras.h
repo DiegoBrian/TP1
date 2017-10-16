@@ -9,13 +9,20 @@
 
 using namespace std;
 
-// Declara��o de classe controladora de intera��o para o servi�o de autentica��o.
+// Declaracao de classe controladora de interacao para o servico de autenticacao.
+
+/**
+     *  @class CntrIUAutenticacao
+     *  Declaracao de classe controladora de interacao para o servico de autenticacao. Esta classe implementa a interface
+     *  IUAutenticacao. Dentre suas atribuicoes esta fazer a ligacao entre a camada de apresentacao e servico do servico
+     *  de autenticacao
+     */
 
 class CntrIUAutenticacao:public IUAutenticacao {
 
 private:
 
-    // Refer�ncia para servidor.
+    // Referencia para servidor.
 
     ILNAutenticacao *cntrLNAutenticacao;
 
@@ -31,6 +38,12 @@ void inline CntrIUAutenticacao::setCntrLNAutenticacao(ILNAutenticacao *cntrLNAut
         this->cntrLNAutenticacao = cntrLNAutenticacao;
 }
 
+/**
+     *  @class CntrIUEstante
+     *  Declaracao de classe controladora de interacao para o servico de estantes virtuais. Esta classe implementa a interface
+     *  IUEstante. Dentre suas atribuicoes esta fazer a ligacao entre a camada de apresentacao e servico do servico
+     *  de estantes virtuais
+     */
 
 
 

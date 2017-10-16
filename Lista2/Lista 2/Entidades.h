@@ -174,6 +174,8 @@ public:
         this->senha = senha;
     }
 
+    /** Metodo de acesso.*/
+
     Senha getSenha() const {
         return senha;
     }
@@ -181,6 +183,10 @@ public:
 
 // Declarações de classes que modelam resultados.
 
+/**
+     *  @class Resultado
+     *  Classe referente a resultados de operações tais como cadastro, insercao e remocao de livros na estante e criacao de resenhas
+     */
 
 class Resultado {
 
@@ -189,11 +195,12 @@ protected:
 
 public:
 
-    // Declarações de possíveis resultados.
+    /** Declarações de possíveis resultados. */
 
     const static int SUCESSO = 0;
     const static int FALHA   = 1;
 
+    /** Metodo de acesso.*/
     void setValor(int valor){
         this->valor = valor;
     }
@@ -203,21 +210,32 @@ public:
     }
 };
 
+/**
+     *  @class ResultadoAutenticacao
+     *  Classe referente a resultados de operações de autenticacao
+     */
+
 class ResultadoAutenticacao:public Resultado {
 
 private:
     Apelido apelido;
 
 public:
+    /** Metodo de acesso.*/
     void setApelido(const Apelido &apelido){      // passagem por referência.
         this->apelido = apelido;
     }
+    /** Metodo de acesso.*/
 
     Apelido getApelido() const {
         return apelido;
     }
 };
 
+/**
+     *  @class ResultadoEstante
+     *  Classe referente a resultados de operações de busca de livros dentro de uma estante
+     */
 
 
 class ResultadoEstante:public Resultado {
