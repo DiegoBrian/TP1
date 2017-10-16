@@ -74,3 +74,56 @@ ResultadoEstante CntrIUEstante::buscar() throw(runtime_error) {
     return resultado;
 }
 
+int CntrIUUsuarios::cadastrar() throw(runtime_error) {
+
+    string entrada;
+    int resultado;
+    Nome nome;
+    Apelido apelido;
+    Telefone telefone;
+    Senha senha;
+    Usuario usuario;
+    //usuario = new Usuario();
+
+    // Solicitar matricula e senha.
+
+    while(true) {
+
+        cout << endl << "Cadastro de usuario." << endl << endl;
+
+        try {
+            cout << "Digite o nome : ";
+            cin >> entrada;
+            nome.setNome(entrada);
+            usuario.setNome(nome);
+            cout << "Digite o apelido : ";
+            cin >> entrada;
+            apelido.setApelido(entrada);
+            usuario.setApelido(apelido);
+            cout << "Digite o telefone : ";
+            cin >> entrada;
+            telefone.setTelefone(entrada);
+            usuario.setTelefone(telefone);
+            cout << "Digite a senha : ";
+            cin >> entrada;
+            senha.setSenha(entrada);
+            usuario.setSenha(senha);
+            break;
+        }
+        catch (const invalid_argument &exp) {
+            cout << endl << "Dado em formato incorreto." << endl;
+        }
+    }
+
+    // Solicitar autenticação.
+
+    resultado = cntrSUsuarios->cadastrar(usuario);
+
+    // Informar resultado da autenticação.
+
+    if(resultado == FALHA)
+    cout << endl << "Falha no autenticacao." << endl;
+
+    return resultado;
+}
+

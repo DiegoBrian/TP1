@@ -20,6 +20,8 @@ private:
         void validarNome(string) throw (invalid_argument);
 
 public:
+        const static string NOME_INVALIDO;
+
         /** Mtodo de acesso.*/
 
         void setNome(string) throw (invalid_argument);
@@ -47,6 +49,8 @@ private:
         void validarTelefone(string) throw (invalid_argument);
 
 public:
+        const static string TELEFONE_INVALIDO;
+
         /** Metodo de acesso.*/
 
         void setTelefone(string) throw (invalid_argument);
@@ -157,9 +161,9 @@ private:
 
 public:
 
-    /** Metodo de acesso.*/
-
     const static string APELIDO_INVALIDO;
+
+    /** Metodo de acesso.*/
 
     void setApelido(string) throw (invalid_argument);
     /** Metodo de acesso.*/

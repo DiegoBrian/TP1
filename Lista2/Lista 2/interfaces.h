@@ -2,7 +2,7 @@
 #define INTERFACES_H_INCLUDED
 
 #include "Dominio.h"
-#include "entidades.h"
+#include "Entidades.h"
 
 #include <stdexcept>
 
@@ -56,6 +56,31 @@ public:
 class ILNEstante {
 public:
     virtual ResultadoEstante buscar(const Titulo&) throw(runtime_error)= 0;
+};
+
+// Declaração adiantada.
+
+class ISUsuarios;
+
+// Declaração de interface para serviço de cadastro de usuário na camada de apresentação.
+
+class IUUsuarios {
+public:
+
+    // Método por meio do qual é solicitada autenticacao.
+
+    virtual int cadastrar() throw(runtime_error) = 0;
+
+    // Método por meio do qual é estabelecida ligação (link) com a controladora na camada de serviço.
+
+    virtual void setCntrSUsuarios(ISUsuarios *) = 0;
+};
+
+// Declaração de interface para serviço de cadastro de usuário na camada de serviço.
+
+class ISUsuarios {
+public:
+    virtual int cadastrar(const Usuario&) throw(runtime_error)= 0;
 };
 
 #endif // INTERFACES_H_INCLUDED

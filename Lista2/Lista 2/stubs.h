@@ -34,10 +34,27 @@ public:
 
     static const string TRIGGER_FALHA;
     static const string TRIGGER_ERRO_SISTEMA;
+    static const string TRIGGER_SUCESSO;
 
     // Declaração de método previsto na interface.
 
     ResultadoEstante buscar(const Titulo&) throw(runtime_error);
+};
+
+// Declaração de classe stub da interface ISUsuarios.
+
+class StubLNUsuarios:public ISUsuarios{
+
+public:
+
+    // Definições de valores a serem usados como gatilhos para notificações de erros.
+
+    static const string TRIGGER_FALHA;
+    static const string TRIGGER_ERRO_SISTEMA;
+
+    // Declaração de método previsto na interface.
+
+    int cadastrar(const Usuario&) throw(runtime_error);
 };
 
 

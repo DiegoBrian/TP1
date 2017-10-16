@@ -4,6 +4,8 @@
 //Definições de constantes.
 const string Apelido::APELIDO_INVALIDO = "teste";
 const string Senha::SENHA_INVALIDA = "inva";
+const string Telefone::TELEFONE_INVALIDO = "(99)-999999999";
+const string Nome::NOME_INVALIDO = "SEMNOME";
 
 // Definições de métodos.
 

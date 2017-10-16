@@ -54,6 +54,33 @@ void inline CntrIUEstante::setCntrLNEstante(ILNEstante *cntrLNEstante){
         this->cntrLNEstante = cntrLNEstante;
 }
 
+// Declaração de classe controladora de interação para o serviço de cadastro de usuário.
+
+class CntrIUUsuarios:public IUUsuarios {
+
+private:
+
+    // Referência para servidor.
+
+    ISUsuarios *cntrSUsuarios;
+
+    // Declarações de possíveis resultados.
+
+    const static int SUCESSO = 0;
+    const static int FALHA   = 1;
+
+public:
+
+    int cadastrar() throw(runtime_error);
+
+    void setCntrSUsuarios(ISUsuarios*);
+};
+
+
+void inline CntrIUUsuarios::setCntrSUsuarios(ISUsuarios *cntrSUsuarios){
+        this->cntrSUsuarios = cntrSUsuarios;
+}
+
 #endif // CONTROLADORAS_H_INCLUDED
 
 
