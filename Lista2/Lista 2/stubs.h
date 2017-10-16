@@ -45,9 +45,10 @@ public:
     static const string TRIGGER_ERRO_SISTEMA;
     static const string TRIGGER_SUCESSO;
 
-    /** Declaração de método previsto na interface.*/
+    /** Declaração de métodos previstos na interface.*/
 
-    ResultadoEstante buscar(const Titulo&) throw(runtime_error);
+    ResultadoBuscaLivro buscarlivro(const Titulo&) throw(runtime_error);
+    ResultadoInsercao inserir(const Titulo&, const Nome&, const Data&, const Codigo&, const GeneroLiterario&) throw(runtime_error);
 };
 
 /**

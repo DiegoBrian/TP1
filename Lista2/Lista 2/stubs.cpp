@@ -44,15 +44,15 @@ ResultadoAutenticacao StubLNAutenticacao::autenticar(const Apelido &apelido, con
 
 
 
-ResultadoEstante StubLNEstante::buscar(const Titulo &titulo) throw(runtime_error) {
+ResultadoBuscaLivro StubLNEstante::buscarlivro(const Titulo &titulo) throw(runtime_error) {
 
     // Apresentar dados recebidos.
 
-    cout << endl << "StubLNEstante::buscar" << endl ;
+    cout << endl << "StubLNEstante::buscarlivro" << endl ;
 
     cout << "Titulo = " << titulo.getTitulo() << endl ;
 
-    ResultadoEstante resultado;
+    ResultadoBuscaLivro resultado;
 
     // Diferentes comportamentos dependendo do valor do titulo.
 
@@ -77,6 +77,40 @@ ResultadoEstante StubLNEstante::buscar(const Titulo &titulo) throw(runtime_error
         }
 
     return resultado;
+}
+
+ResultadoInsercao StubLNEstante::inserir(const Titulo &titulo, const Nome &nomeAutor, const Data &data, const Codigo &codigo, const GeneroLiterario &generoLiterario) throw(runtime_error){
+
+    // Apresentar dados recebidos.
+
+    cout << endl << "StubLNEstante::inserir" << endl ;
+
+    cout << endl << "Titulo = " << titulo.getTitulo() << endl ;
+    cout << "Nome do Autor = " << nomeAutor.getNome() << endl ;
+    cout << "Data de publicacao = " << data.getData() << endl ;
+    cout << "Codigo = " << codigo.getCodigo() << endl ;
+    cout << "Genero literario = " << generoLiterario.getGeneroLiterario() << endl ;
+
+    ResultadoInsercao resultado;
+
+    // Diferentes comportamentos dependendo do valor do titulo.
+
+    if(titulo.getTitulo().compare(TRIGGER_FALHA)==0){
+            resultado.setValor(ResultadoAutenticacao::FALHA);
+    }
+
+    else if (titulo.getTitulo().compare(TRIGGER_ERRO_SISTEMA)==0){
+            throw runtime_error("Erro de sistema");
+    }
+
+    else{
+            resultado.setValor(ResultadoInsercao::SUCESSO);
+            resultado.setTitulo(titulo);
+            cout << endl << "LIVRO INSERIDO COM SUCESSO" << endl;
+        }
+
+    return resultado;
+
 }
 
 //Definições de constantes.

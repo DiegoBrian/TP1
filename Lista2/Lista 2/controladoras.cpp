@@ -39,9 +39,9 @@ ResultadoAutenticacao CntrIUAutenticacao::autenticar() throw(runtime_error) {
     return resultado;
 }
 
-ResultadoEstante CntrIUEstante::buscar() throw(runtime_error) {
+ResultadoBuscaLivro CntrIUEstante::buscarlivro() throw(runtime_error) {
 
-    ResultadoEstante resultado;
+    ResultadoBuscaLivro resultado;
     Titulo titulo;
     std::string entrada;
 
@@ -64,12 +64,66 @@ ResultadoEstante CntrIUEstante::buscar() throw(runtime_error) {
 
     // Solicitar titulo.
 
-    resultado = cntrLNEstante->buscar(titulo);
+    resultado = cntrLNEstante->buscarlivro(titulo);
 
-    // Informar resultado da busca.
+    // Informar resultado da BuscaLivro.
 
-    if(resultado.getValor() == ResultadoEstante::FALHA)
-    cout << endl << "Falha na busca." << endl;
+    if(resultado.getValor() == ResultadoBuscaLivro::FALHA)
+    cout << endl << "Falha na BuscaLivro." << endl;
+
+    return resultado;
+}
+
+ResultadoInsercao CntrIUEstante::inserir() throw(runtime_error) {
+
+    ResultadoInsercao resultado;
+
+    Titulo titulo;
+    Nome nome;
+    Data data;
+    Codigo codigo;
+    GeneroLiterario generoLiterario;
+
+    std::string entrada;
+
+    // Solicitar dados do livro.
+
+    while(true) {
+
+        cout << endl << "Insercao de livro." << endl << endl;
+
+        try {
+            cout << "Digite o titulo : ";
+            cin >> entrada;
+            titulo.setTitulo(entrada);
+            cout << "Digite o nome do autor : ";
+            cin >> entrada;
+            nome.setNome(entrada);
+            cout << "Digite a data de publicacao : ";
+            cin >> entrada;
+            data.setData(entrada);
+            cout << "Digite o codigo : ";
+            cin >> entrada;
+            codigo.setCodigo(entrada);
+            cout << "Digite o genero literario : ";
+            cin >> entrada;
+            generoLiterario.setGeneroLiterario(entrada);
+
+            break;
+        }
+        catch (const invalid_argument &exp) {
+            cout << endl << "Dado em formato incorreto ou dado invalido." << endl;
+        }
+    }
+
+    // Solicitar autentica��o.
+
+    resultado = cntrLNEstante->inserir(titulo, nome, data, codigo, generoLiterario);
+
+    // Informar resultado da autentica��o.
+
+    if(resultado.getValor() == ResultadoAutenticacao::FALHA)
+    cout << endl << "Falha na autenticacao." << endl;
 
     return resultado;
 }

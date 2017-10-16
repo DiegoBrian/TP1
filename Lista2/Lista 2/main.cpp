@@ -26,7 +26,7 @@ using namespace std;
 
 /**
      *  @class main
-     *  Classe controladora principal  Entre as suas atribuicoes esta fazer a montagem de todo o sistema e construir as 
+     *  Classe controladora principal  Entre as suas atribuicoes esta fazer a montagem de todo o sistema e construir as
      *  telas de menu principal para a navegacao do usuario
      */
 
@@ -53,7 +53,8 @@ int main()
     // Retorno dos resultados dos serviços solicitados
 
     ResultadoAutenticacao resultado;
-    ResultadoEstante resultado2;
+    ResultadoBuscaLivro resultado2;
+    ResultadoInsercao resultado4;
     int resultado3;
 
     //variavel de selecao do menu
@@ -113,9 +114,9 @@ int main()
                     cin >> opcao2;
 
                     if(opcao2 == PESQUISAR_LIVRO){
-                        // Simula a tela de busca por titulo.
+                        // Simula a tela de BuscaLivro por titulo.
 
-                        cout << endl << "Tela de busca por titulo." << endl;
+                        cout << endl << "Tela de Busca por titulo." << endl;
 
                         cout << "Trigger de falha           = " << StubLNEstante::TRIGGER_FALHA << endl;
                         cout << "Trigger de erro de sistema = " << StubLNEstante::TRIGGER_ERRO_SISTEMA << endl;
@@ -123,9 +124,9 @@ int main()
 
                         try{
 
-                            // Ilustra soliciatacao de serviço de busca.
+                            // Ilustra soliciatacao de serviço de BuscaLivro.
 
-                            resultado2 = cntrIUEstante->buscar();
+                            resultado2 = cntrIUEstante->buscarlivro();
                         }
                         catch(const runtime_error &exp){
                                  cout << "Erro de sistema." << endl;
@@ -133,6 +134,23 @@ int main()
 
                     }
                     else if(opcao2 == INCLUIR_LIVRO){
+                            // Simula a inclusao de um livro.
+
+                        cout << endl << "Tela de inclusao de livro." << endl;
+
+                        cout << "Trigger de falha           = " << StubLNEstante::TRIGGER_FALHA << endl;
+                        cout << "Trigger de erro de sistema = " << StubLNEstante::TRIGGER_ERRO_SISTEMA << endl;
+                        cout << "Trigger de sucesso         = " << StubLNEstante::TRIGGER_SUCESSO << endl;
+
+                         try{
+
+                            // Ilustra soliciatacao de serviço de Inclusao.
+
+                            resultado4 = cntrIUEstante->inserir();
+                        }
+                        catch(const runtime_error &exp){
+                                 cout << "Erro de sistema." << endl;
+                        }
 
                     }
                     else if(opcao2 == REMOVER_LIVRO){

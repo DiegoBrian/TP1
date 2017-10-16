@@ -219,6 +219,7 @@ class ResultadoAutenticacao:public Resultado {
 
 private:
     Apelido apelido;
+    Senha senha;
 
 public:
     /** Metodo de acesso.*/
@@ -230,15 +231,23 @@ public:
     Apelido getApelido() const {
         return apelido;
     }
+
+    void setSenha(const Senha &senha){
+        this->senha = senha;
+    }
+
+    Senha getSenha() const {
+        return senha;
+    }
 };
 
 /**
-     *  @class ResultadoEstante
-     *  Classe referente a resultados de operações de busca de livros dentro de uma estante
+     *  @class ResultadoBuscaLivro
+     *  Classe referente a resultados de operações de BuscaLivro de livros dentro de uma estante
      */
 
 
-class ResultadoEstante:public Resultado {
+class ResultadoBuscaLivro:public Resultado {
 
 private:
     Titulo titulo;
@@ -253,5 +262,84 @@ public:
     }
 
 };
+
+/**
+     *  @class ResultadoInsercao
+     *  Classe referente a resultados de operações de inserção de livros dentro de uma estante
+     */
+
+class ResultadoInsercao:public Resultado {
+
+private:
+
+    Titulo titulo;
+    Nome nomeAutor;
+    Data data;
+    Codigo codigo;
+    GeneroLiterario generoLiterario;
+
+public:
+
+     /** Métodos de acesso.*/
+
+    void setTitulo(const Titulo &titulo){
+        this->titulo = titulo;
+    }
+
+    /** Metodo de acesso.*/
+
+    Titulo getTitulo() const {
+        return titulo;
+    }
+
+    /** Metodo de acesso.*/
+
+    void setNomeAutor(const Nome &nomeAutor){
+        this->nomeAutor = nomeAutor;
+    }
+
+    /** Metodo de acesso.*/
+
+    Nome getNomeAutor() const {
+        return nomeAutor;
+    }
+
+    /** Metodo de acesso.*/
+
+    void setData(const Data &data){
+        this->data = data;
+    }
+
+    /** Metodo de acesso.*/
+
+    Data getData() const {
+        return data;
+    }
+
+    /** Metodo de acesso.*/
+
+    void setCodigo(const Codigo &codigo){
+        this->codigo = codigo;
+    }
+
+    /** Metodo de acesso.*/
+
+    Codigo getCodigo() const {
+        return codigo;
+    }
+
+    /** Metodo de acesso.*/
+
+    void setGeneroLiterario(const GeneroLiterario &generoLiterario){
+        this->generoLiterario = generoLiterario;
+    }
+
+    /** Metodo de acesso.*/
+
+    GeneroLiterario getGeneroLiterario() const {
+        return generoLiterario;
+    }
+};
+
 
 #endif // ENTIDADES_H_INCLUDED

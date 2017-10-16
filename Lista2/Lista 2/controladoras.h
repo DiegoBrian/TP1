@@ -60,7 +60,10 @@ private:
 public:
 
     /** Declaração de método previsto na interface.*/
-    ResultadoEstante buscar() throw(runtime_error);
+    ResultadoBuscaLivro buscarlivro() throw(runtime_error);
+
+    /** Declaração de método previsto na interface.*/
+    ResultadoInsercao inserir() throw(runtime_error);
 
     /** Declaração de método previsto na interface.*/
     void setCntrLNEstante(ILNEstante*);
@@ -78,7 +81,7 @@ void inline CntrIUEstante::setCntrLNEstante(ILNEstante *cntrLNEstante){
      *  de cadastro de usuarios
      */
 
-// 
+//
 
 class CntrIUUsuarios:public IUUsuarios {
 

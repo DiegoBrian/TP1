@@ -56,13 +56,18 @@ class ILNEstante;
 class IUEstante {
 public:
 
-    /** Método por meio do qual é solicitada busca por livro em Estante. */
+    /** Método por meio do qual é solicitada BuscaLivro por livro em Estante. */
 
-    virtual ResultadoEstante buscar() throw(runtime_error) = 0;
+    virtual ResultadoBuscaLivro buscarlivro() throw(runtime_error) = 0;
+
+    /** Método por meio do qual é solicitada a insercao de um livro na Estante. */
+
+    virtual ResultadoInsercao inserir() throw(runtime_error) = 0;
 
     /** Método por meio do qual é estabelecida ligação (link) com a controladora na camada de serviço.*/
 
     virtual void setCntrLNEstante(ILNEstante *) = 0;
+
 };
 
 /**
@@ -72,7 +77,8 @@ public:
 
 class ILNEstante {
 public:
-    virtual ResultadoEstante buscar(const Titulo&) throw(runtime_error)= 0;
+    virtual ResultadoBuscaLivro buscarlivro(const Titulo&) throw(runtime_error)= 0;
+    virtual ResultadoInsercao inserir(const Titulo&, const Nome&, const Data&, const Codigo&, const GeneroLiterario&) throw(runtime_error)= 0;
 };
 
 // Declaração adiantada.
