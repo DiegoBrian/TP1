@@ -14,18 +14,18 @@ class ILNAutenticacao;
 
 /**
      *  @class IUAutenticacao
-     *  Declaração de interface para serviço de autenticação na camada de apresentacao
+     *  Interface para serviço de autenticação na camada de apresentacao
      */
 
 
 class IUAutenticacao {
 public:
 
-    // Método por meio do qual é solicitada autenticacao.
+    /** Método por meio do qual é solicitada autenticacao.*/
 
     virtual ResultadoAutenticacao autenticar() throw(runtime_error) = 0;
 
-    // Método por meio do qual é estabelecida ligação (link) com a controladora na camada de serviço.
+    /** Método por meio do qual é estabelecida ligação (link) com a controladora na camada de serviço.*/
 
     virtual void setCntrLNAutenticacao(ILNAutenticacao *) = 0;
 };
@@ -33,7 +33,7 @@ public:
 
 /**
      *  @class ILNAutenticacao
-     *  Declaração de interface para serviço de autenticação na camada de serviço.
+     *  Interface para serviço de autenticação na camada de serviço.
      */
 
 
@@ -49,25 +49,25 @@ class ILNEstante;
 
 /**
      *  @class IUEstante
-     *  Declaração de interface para serviço de estantes virtuais na camada de apresentação.
+     *  Interface para serviço de estantes virtuais na camada de apresentação.
      */
 
 
 class IUEstante {
 public:
 
-    // Método por meio do qual é solicitada Estante.
+    /** Método por meio do qual é solicitada busca por livro em Estante. */
 
     virtual ResultadoEstante buscar() throw(runtime_error) = 0;
 
-    // Método por meio do qual é estabelecida ligação (link) com a controladora na camada de serviço.
+    /** Método por meio do qual é estabelecida ligação (link) com a controladora na camada de serviço.*/
 
     virtual void setCntrLNEstante(ILNEstante *) = 0;
 };
 
 /**
      *  @class ILNEstante
-     *  Declaração de interface para serviço de estantes virtuais na camada de serviço.
+     *  Interface para serviço de estantes virtuais na camada de serviço.
      */
 
 class ILNEstante {
@@ -81,29 +81,30 @@ class ISUsuarios;
 
 /**
      *  @class IUUsuarios
-     *  Declaração de interface para serviço de cadastro de usuário na camada de apresentação.
+     *  Interface para serviço de cadastro de usuário na camada de apresentação.
      */
 
 
 class IUUsuarios {
 public:
 
-    // Método por meio do qual é solicitada autenticacao.
+    /** Método por meio do qual é solicitado cadastramento.*/
 
     virtual int cadastrar() throw(runtime_error) = 0;
 
-    // Método por meio do qual é estabelecida ligação (link) com a controladora na camada de serviço.
+    /** Método por meio do qual é estabelecida ligação (link) com a controladora na camada de serviço.*/
 
     virtual void setCntrSUsuarios(ISUsuarios *) = 0;
 };
 
 /**
      *  @class ISUsuarios
-     *  Declaração de interface para serviço de cadastro de usuário na camada de serviço.
+     *  Interface para serviço de cadastro de usuário na camada de serviço.
      */
 
 class ISUsuarios {
 public:
+	/** Método por meio do qual é solicitado cadastramento.*/
     virtual int cadastrar(const Usuario&) throw(runtime_error)= 0;
 };
 

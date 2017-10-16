@@ -13,7 +13,7 @@ using namespace std;
 
 /**
      *  @class CntrIUAutenticacao
-     *  Declaracao de classe controladora de interacao para o servico de autenticacao. Esta classe implementa a interface
+     *  Classe controladora de interacao para o servico de autenticacao. Esta classe implementa a interface
      *  IUAutenticacao. Dentre suas atribuicoes esta fazer a ligacao entre a camada de apresentacao e servico do servico
      *  de autenticacao
      */
@@ -28,8 +28,10 @@ private:
 
 public:
 
+    /** Declaração de método previsto na interface.*/
     ResultadoAutenticacao autenticar() throw(runtime_error);
 
+    /** Declaração de método previsto na interface.*/
     void setCntrLNAutenticacao(ILNAutenticacao*);
 };
 
@@ -40,7 +42,7 @@ void inline CntrIUAutenticacao::setCntrLNAutenticacao(ILNAutenticacao *cntrLNAut
 
 /**
      *  @class CntrIUEstante
-     *  Declaracao de classe controladora de interacao para o servico de estantes virtuais. Esta classe implementa a interface
+     *  Classe controladora de interacao para o servico de estantes virtuais. Esta classe implementa a interface
      *  IUEstante. Dentre suas atribuicoes esta fazer a ligacao entre a camada de apresentacao e servico do servico
      *  de estantes virtuais
      */
@@ -57,8 +59,10 @@ private:
 
 public:
 
+    /** Declaração de método previsto na interface.*/
     ResultadoEstante buscar() throw(runtime_error);
 
+    /** Declaração de método previsto na interface.*/
     void setCntrLNEstante(ILNEstante*);
 };
 
@@ -69,7 +73,7 @@ void inline CntrIUEstante::setCntrLNEstante(ILNEstante *cntrLNEstante){
 
 /**
      *  @class CntrIUEstante
-     *  Declaração de classe controladora de interação para o serviço de cadastro de usuário. Esta classe implementa a interface
+     *  Classe controladora de interação para o serviço de cadastro de usuário. Esta classe implementa a interface
      *  IUUsuarios. Dentre suas atribuicoes esta fazer a ligacao entre a camada de apresentacao e servico do servico
      *  de cadastro de usuarios
      */
@@ -91,8 +95,10 @@ private:
 
 public:
 
+    /** Declaração de método previsto na interface.*/
     int cadastrar() throw(runtime_error);
 
+    /** Declaração de método previsto na interface.*/
     void setCntrSUsuarios(ISUsuarios*);
 };
 
