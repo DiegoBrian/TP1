@@ -1,0 +1,40 @@
+# Project: Sistema de matricula
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o UnidadeTiposBasicos.o UnidadeEntidades.o UnidadeControladoras.o UnidadePersistencia.o
+LINKOBJ  = main.o UnidadeTiposBasicos.o UnidadeEntidades.o UnidadeControladoras.o UnidadePersistencia.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc sqlite3.dll
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "Sistema de matricula.exe"
+CXXFLAGS = $(CXXINCS) -std=gnu++11
+CFLAGS   = $(INCS) -std=gnu++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+UnidadeTiposBasicos.o: UnidadeTiposBasicos.cpp
+	$(CPP) -c UnidadeTiposBasicos.cpp -o UnidadeTiposBasicos.o $(CXXFLAGS)
+
+UnidadeEntidades.o: UnidadeEntidades.cpp
+	$(CPP) -c UnidadeEntidades.cpp -o UnidadeEntidades.o $(CXXFLAGS)
+
+UnidadeControladoras.o: UnidadeControladoras.cpp
+	$(CPP) -c UnidadeControladoras.cpp -o UnidadeControladoras.o $(CXXFLAGS)
+
+UnidadePersistencia.o: UnidadePersistencia.cpp
+	$(CPP) -c UnidadePersistencia.cpp -o UnidadePersistencia.o $(CXXFLAGS)
