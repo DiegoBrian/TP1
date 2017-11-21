@@ -38,9 +38,9 @@ int main() {
     senha_4.setSenha("ghij");
 
     nome_1.setNome("nome um");
-    nome_1.setNome("nome dois");
-    nome_1.setNome("nome tres");
-    nome_1.setNome("nome quatro");
+    nome_2.setNome("nome dois");
+    nome_3.setNome("nome tres");
+    nome_4.setNome("nome quatro");
 
     tel_1.setTelefone("(11)-111111111");
     tel_2.setTelefone("(22)-222222222");
@@ -102,9 +102,18 @@ int main() {
         cout << "Sucesso na inclusao" << endl;
     }
 
+    resultado = container.incluir(usuario_4);
+
+    if(resultado.getValor() == Resultado::FALHA){
+        cout << "Erro na inclusao" << endl;
+    }
+    else {
+        cout << "Sucesso na inclusao" << endl;
+    }
+
     // Exemplo de erro na inclus�o.
 
-    // Tentativa de incluir elemento presente no container.
+    // Tentativa de incluir elemento que ja havia sido incluido no container.
 
     resultado = container.incluir(usuario_1);
 

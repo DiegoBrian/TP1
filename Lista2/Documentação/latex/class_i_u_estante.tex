@@ -1,0 +1,62 @@
+\hypertarget{class_i_u_estante}{}\section{ReferÃªncia da Classe I\+U\+Estante}
+\label{class_i_u_estante}\index{I\+U\+Estante@{I\+U\+Estante}}
+
+
+{\ttfamily \#include $<$interfaces.\+h$>$}
+
+Diagrama de Hierarquia para I\+U\+Estante\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_u_estante}
+\end{center}
+\end{figure}
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_resultado_busca_livro}{Resultado\+Busca\+Livro} \hyperlink{class_i_u_estante_a0999af8632d4dae7524396d5b3f8788b}{buscarlivro} ()=0  throw (runtime\+\_\+error)
+\item 
+virtual \hyperlink{class_resultado_insercao}{Resultado\+Insercao} \hyperlink{class_i_u_estante_acac88664a3d979dbfb4fd5c8ce882aac}{inserir} ()=0  throw (runtime\+\_\+error)
+\item 
+virtual void \hyperlink{class_i_u_estante_ae119ca49fad9d22502177f7bfd6933a2}{set\+Cntr\+L\+N\+Estante} (\hyperlink{class_i_l_n_estante}{I\+L\+N\+Estante} $\ast$)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+Interface para serviço de estantes virtuais na camada de apresentação. 
+
+\subsection{MÃ©todos}
+\mbox{\Hypertarget{class_i_u_estante_a0999af8632d4dae7524396d5b3f8788b}\label{class_i_u_estante_a0999af8632d4dae7524396d5b3f8788b}} 
+\index{I\+U\+Estante@{I\+U\+Estante}!buscarlivro@{buscarlivro}}
+\index{buscarlivro@{buscarlivro}!I\+U\+Estante@{I\+U\+Estante}}
+\subsubsection{\texorpdfstring{buscarlivro()}{buscarlivro()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_resultado_busca_livro}{Resultado\+Busca\+Livro} I\+U\+Estante\+::buscarlivro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Método por meio do qual é solicitada Busca\+Livro por livro em Estante. 
+
+Implementado por \hyperlink{class_cntr_i_u_estante_a0ada4c7c0131f888081aa446bbd92f64}{Cntr\+I\+U\+Estante}.
+
+\mbox{\Hypertarget{class_i_u_estante_acac88664a3d979dbfb4fd5c8ce882aac}\label{class_i_u_estante_acac88664a3d979dbfb4fd5c8ce882aac}} 
+\index{I\+U\+Estante@{I\+U\+Estante}!inserir@{inserir}}
+\index{inserir@{inserir}!I\+U\+Estante@{I\+U\+Estante}}
+\subsubsection{\texorpdfstring{inserir()}{inserir()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_resultado_insercao}{Resultado\+Insercao} I\+U\+Estante\+::inserir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Método por meio do qual é solicitada a insercao de um livro na Estante. 
+
+Implementado por \hyperlink{class_cntr_i_u_estante_abe47425cb3d9951b31401b1540dc95a4}{Cntr\+I\+U\+Estante}.
+
+\mbox{\Hypertarget{class_i_u_estante_ae119ca49fad9d22502177f7bfd6933a2}\label{class_i_u_estante_ae119ca49fad9d22502177f7bfd6933a2}} 
+\index{I\+U\+Estante@{I\+U\+Estante}!set\+Cntr\+L\+N\+Estante@{set\+Cntr\+L\+N\+Estante}}
+\index{set\+Cntr\+L\+N\+Estante@{set\+Cntr\+L\+N\+Estante}!I\+U\+Estante@{I\+U\+Estante}}
+\subsubsection{\texorpdfstring{set\+Cntr\+L\+N\+Estante()}{setCntrLNEstante()}}
+{\footnotesize\ttfamily virtual void I\+U\+Estante\+::set\+Cntr\+L\+N\+Estante (\begin{DoxyParamCaption}\item[{\hyperlink{class_i_l_n_estante}{I\+L\+N\+Estante} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Método por meio do qual é estabelecida ligação (link) com a controladora na camada de serviço. 
+
+Implementado por \hyperlink{class_cntr_i_u_estante_ade15f7b3b360e31d1df95c4fe7bd65e9}{Cntr\+I\+U\+Estante}.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaces_8h}{interfaces.\+h}\end{DoxyCompactItemize}

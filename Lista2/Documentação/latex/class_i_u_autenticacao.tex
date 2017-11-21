@@ -1,0 +1,50 @@
+\hypertarget{class_i_u_autenticacao}{}\section{ReferÃªncia da Classe I\+U\+Autenticacao}
+\label{class_i_u_autenticacao}\index{I\+U\+Autenticacao@{I\+U\+Autenticacao}}
+
+
+{\ttfamily \#include $<$interfaces.\+h$>$}
+
+Diagrama de Hierarquia para I\+U\+Autenticacao\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_u_autenticacao}
+\end{center}
+\end{figure}
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_resultado_autenticacao}{Resultado\+Autenticacao} \hyperlink{class_i_u_autenticacao_ac963b141bda437bfd3ac425e9e6b9898}{autenticar} ()=0  throw (runtime\+\_\+error)
+\item 
+virtual void \hyperlink{class_i_u_autenticacao_afaa4e4980ee10e2faaecb9ccfe524c61}{set\+Cntr\+L\+N\+Autenticacao} (\hyperlink{class_i_l_n_autenticacao}{I\+L\+N\+Autenticacao} $\ast$)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+Interface para serviço de autenticação na camada de apresentacao 
+
+\subsection{MÃ©todos}
+\mbox{\Hypertarget{class_i_u_autenticacao_ac963b141bda437bfd3ac425e9e6b9898}\label{class_i_u_autenticacao_ac963b141bda437bfd3ac425e9e6b9898}} 
+\index{I\+U\+Autenticacao@{I\+U\+Autenticacao}!autenticar@{autenticar}}
+\index{autenticar@{autenticar}!I\+U\+Autenticacao@{I\+U\+Autenticacao}}
+\subsubsection{\texorpdfstring{autenticar()}{autenticar()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_resultado_autenticacao}{Resultado\+Autenticacao} I\+U\+Autenticacao\+::autenticar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Método por meio do qual é solicitada autenticacao. 
+
+Implementado por \hyperlink{class_cntr_i_u_autenticacao_a753ca57d7de28b1535696df732b6fba6}{Cntr\+I\+U\+Autenticacao}.
+
+\mbox{\Hypertarget{class_i_u_autenticacao_afaa4e4980ee10e2faaecb9ccfe524c61}\label{class_i_u_autenticacao_afaa4e4980ee10e2faaecb9ccfe524c61}} 
+\index{I\+U\+Autenticacao@{I\+U\+Autenticacao}!set\+Cntr\+L\+N\+Autenticacao@{set\+Cntr\+L\+N\+Autenticacao}}
+\index{set\+Cntr\+L\+N\+Autenticacao@{set\+Cntr\+L\+N\+Autenticacao}!I\+U\+Autenticacao@{I\+U\+Autenticacao}}
+\subsubsection{\texorpdfstring{set\+Cntr\+L\+N\+Autenticacao()}{setCntrLNAutenticacao()}}
+{\footnotesize\ttfamily virtual void I\+U\+Autenticacao\+::set\+Cntr\+L\+N\+Autenticacao (\begin{DoxyParamCaption}\item[{\hyperlink{class_i_l_n_autenticacao}{I\+L\+N\+Autenticacao} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Método por meio do qual é estabelecida ligação (link) com a controladora na camada de serviço. 
+
+Implementado por \hyperlink{class_cntr_i_u_autenticacao_a4ee05cc87ef8cf13e9ba6a3390ac1943}{Cntr\+I\+U\+Autenticacao}.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaces_8h}{interfaces.\+h}\end{DoxyCompactItemize}
