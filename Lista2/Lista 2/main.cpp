@@ -37,6 +37,11 @@ using namespace std;
 int main()
 {
 
+    // Criar um container.
+
+    ContainerUsuario container;
+
+
     // Ligação entre controladora na camada de apresentação e stub.
 
     // Instancia as controladoras.
@@ -55,8 +60,8 @@ int main()
     cntrIUUsuarios->setCntrSUsuarios(stubLNUsuarios);
 
     // Retorno dos resultados dos serviços solicitados
-
-    ResultadoAutenticacao resultado;
+    ResultadoUsuario resultado;
+    ResultadoAutenticacao resultado1;
     ResultadoBuscaLivro resultado2;
     ResultadoInsercao resultado4;
     int resultado3;
@@ -91,7 +96,7 @@ int main()
 
                 // Ilustra soliciatacao de serviço de autenticação.
 
-                resultado = cntrIUAutenticacao->autenticar();
+                resultado1 = cntrIUAutenticacao->autenticar();
             }
             catch(const runtime_error &exp){
                      cout << "Erro de sistema." << endl;
@@ -191,7 +196,7 @@ int main()
 
             try{
 
-                // Ilustra soliciatacao de serviço de autenticação.
+                // Ilustra soliciatacao de serviço de cadastro.
 
                 resultado3 = cntrIUUsuarios->cadastrar();
             }

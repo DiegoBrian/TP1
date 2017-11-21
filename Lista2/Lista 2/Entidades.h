@@ -211,6 +211,26 @@ public:
 };
 
 /**
+     *  @class ResultadoUsuario
+     *  Classe referente a resultados de operações de cadastro de usuario
+     */
+
+class ResultadoUsuario:public Resultado {
+
+private:
+    Usuario usuario;
+
+public:
+    void setUsuario(const Usuario &usuario){
+        this->usuario = usuario;
+    }
+
+    Usuario getUsuario() const {
+        return usuario;
+    }
+};
+
+/**
      *  @class ResultadoAutenticacao
      *  Classe referente a resultados de operações de autenticacao
      */
